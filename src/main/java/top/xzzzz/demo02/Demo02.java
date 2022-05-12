@@ -1,15 +1,13 @@
-package top.xzzzz.demo05;
+package top.xzzzz.demo02;
 
-import org.testng.annotations.Test;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class demo05 {
-    @Test
-    public void testResultSet() throws Exception {
+public class Demo02 {
+
+    public void testResultSet2() throws Exception {
         String url = "jdbc:mysql:///db1?useSSL=false";
         String username = "root";
         String password = "root";
@@ -23,18 +21,22 @@ public class demo05 {
 
         ResultSet resultSet = statement.executeQuery(sql);
 
+        List<Account> list = new ArrayList<Account>();
+
         while (resultSet.next()){
+            Account account = new Account();
 
             int id = resultSet.getInt("id");
             String name = resultSet.getString("name");
             double money = resultSet.getDouble("money");
 
-            System.out.println(id);
-            System.out.println(name);
-            System.out.println(money);
+            account.setId(id);
+            account.setName(name);
+            account.setMoney(money);
 
-            System.out.println("------------");
+            list.add(account);
         }
+        System.out.println(list);
 
         resultSet.close();
         statement.close();

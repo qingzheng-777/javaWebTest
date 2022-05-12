@@ -1,10 +1,10 @@
-package top.xzzzz.demo02;
+package top.xzzzz.demo01;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-public class demo02 {
+public class Demo02 {
     public static void main(String[] args) throws Exception {
 
         Class.forName("com.mysql.jdbc.Driver");

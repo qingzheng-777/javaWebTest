@@ -1,15 +1,14 @@
-package top.xzzzz.demo03;
+package top.xzzzz.demo01;
 
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.sql.Statement;
 
-public class demo03 {
+public class Demo03 {
 
-    @Test
+
         public void testDML() throws Exception {
 
         Class.forName("com.mysql.jdbc.Driver");

@@ -1,4 +1,4 @@
-package top.xzzzz.demo06;
+package top.xzzzz.demo02;
 
 public class Account {
     private int id;

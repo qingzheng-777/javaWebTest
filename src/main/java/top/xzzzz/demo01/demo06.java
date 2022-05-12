@@ -1,14 +1,10 @@
-package top.xzzzz.demo07;
+package top.xzzzz.demo01;
 
-import org.testng.annotations.Test;
-import top.xzzzz.demo06.Account;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
-public class demo07 {
-    @Test
+public class demo06 {
+
     public void testLogin() throws Exception {
         String url = "jdbc:mysql:///db1?useSSL=false";
         String username = "root";
@@ -20,7 +16,7 @@ public class demo07 {
         String name = "qingzheng";
         String pwd = "' or '1' = '1";
 
-        String sql = "select * from  where username = '+name+' and password = '+pwd+'";
+        String sql = "select * from  where name = '”+username+“' and password = '"+pwd+"'";
 
         Statement statement = connection.createStatement();
 
